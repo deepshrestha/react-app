@@ -3,26 +3,39 @@ import './Contact.css';
 
 function Contact(props){
     return (
-        <div>
-            <div>
-                <h3 style={{color: "red"}}>name: {props.name}</h3>
-                <h3 style={{display : !props.email && "none"}}>
-                email: {props.email != "" ? props.email : "N/A"}</h3>
-                <h3>phone: {props.phone}</h3>
-                <div className="row">
-                    <div className="col-md-4">
-                        Like
-                    </div>
-                    <div className="col-md-4">
-                        Comment
-                    </div>
-                    <div className="col-md-4">
-                        Share
+        <div className="font-text">
+            <div className="card">
+                <div className="card-body">
+                    <p className="card-title font-weight-bold">{props.name}</p>
+                    <p className="card-text">
+                        This card has supporting text below as a natural lead-in to additional content.
+                    </p>
+                </div>
+                <div className="card-footer">
+                    <small className="text-muted">Last updated 3 mins ago</small>
+                </div>
+                <div className="p-2" style={{backgroundColor:"#fff2f2", border: "1px solid #edeaea"}}>
+                    <div className="row" style={{marginLeft:40}}>
+                        <div className="col-md-4">
+                            <small className="small">
+                                <a href="#"><img title="Like" src="/src/images/like.png" height="20" /></a>
+                            </small>
+                        </div>
+                        <div className="col-md-4">
+                            <small className="small">
+                                <a href="#"><img title="Comment" src="/src/images/comment.png" height="20" /></a>
+                            </small>
+                        </div>
+                        <div className="col-md-4">
+                            <small className="small">
+                                <a href="#"><img title="Share" src="/src/images/share.png" height="20" /></a>
+                            </small>
+                        </div>
                     </div>
                 </div>
             </div>
-            <hr/>
-        </div>        
+            <br/>
+        </div>
     )
 }
 
